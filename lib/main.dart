@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:s_medi/firebase_options.dart';
-import 'package:s_medi/general/consts/consts.dart';
+import 'package:healwell/firebase_options.dart';
+import 'package:healwell/general/consts/consts.dart';
 
 import 'users/auth/view/login_page.dart';
 import 'users/home/view/home.dart';
@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Smadical',
+      title: 'HealWell',
       theme: ThemeData(
         primaryColor: AppColors.primeryColor,
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff4B2EAD)),

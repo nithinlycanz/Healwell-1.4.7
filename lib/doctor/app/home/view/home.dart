@@ -1,4 +1,4 @@
-import 'package:s_medi/doctor/general/consts/consts.dart';
+import 'package:healwell/doctor/general/consts/consts.dart';
 
 import '../../settings/view/setting_view.dart';
 import '../../total_appintment/view/total_appointment_view.dart';
@@ -34,6 +34,10 @@ class _HomeState extends State<Home> {
               icon: Icon(Icons.date_range), label: "Appointments"),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: "Settings"),
+                BottomNavigationBarItem(
+              icon: Icon(Icons.medication_liquid_outlined),
+              label: "Medcart"), //mycha
+        
         ],
       ),
     );

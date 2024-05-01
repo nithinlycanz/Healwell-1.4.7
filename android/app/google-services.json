@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "695003663399",
-    "project_id": "smedical-e2870",
-    "storage_bucket": "smedical-e2870.appspot.com"
+    "project_number": "581335919406",
+    "project_id": "healwell-c6d4e",
+    "storage_bucket": "healwell-c6d4e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:695003663399:android:0a664503ef86f94062d202",
+        "mobilesdk_app_id": "1:581335919406:android:f1116fe6108d164100e8bf",
         "android_client_info": {
-          "package_name": "com.example.s_medi"
+          "package_name": "com.example.healwell"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD2li5dgb3WSckpqMajGgCshAnZ8kvihb4"
+          "current_key": "AIzaSyCDkDt7-QZcwEuIZpLAFN1DtB0NvZGkAb4"
         }
       ],
       "services": {

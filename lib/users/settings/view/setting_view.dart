@@ -1,4 +1,4 @@
-import 'package:s_medi/general/consts/consts.dart';
+import 'package:healwell/general/consts/consts.dart';
 
 import '../../auth/controller/signup_controller.dart';
 import '../../auth/view/login_page.dart';

@@ -1,4 +1,4 @@
-import 'package:s_medi/doctor/general/consts/consts.dart';
+import 'package:healwell/doctor/general/consts/consts.dart';
 
 class LoginController extends GetxController {
   UserCredential? userCredential;

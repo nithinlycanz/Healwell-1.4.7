@@ -1,4 +1,4 @@
-import 'package:s_medi/general/consts/consts.dart';
+import 'package:healwell/general/consts/consts.dart';
 
 class Appointmentdetails extends StatelessWidget {
   final DocumentSnapshot doc;
@@ -62,14 +62,13 @@ class Appointmentdetails extends StatelessWidget {
                     width: 60,
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: AppColors.primeryColor,
-                    ),
+                        borderRadius: BorderRadius.circular(15),
+                        color: AppColors.primeryColor),
                     child: IconButton(
                       onPressed: () {},
                       icon: const Icon(
                         Icons.phone,
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
                   ),

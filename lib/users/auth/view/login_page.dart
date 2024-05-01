@@ -1,4 +1,4 @@
-import 'package:s_medi/general/consts/consts.dart';
+import 'package:healwell/general/consts/consts.dart';
 import '../../home/view/home.dart';
 import '../../widgets/coustom_textfield.dart';
 import '../controller/login_controller.dart';

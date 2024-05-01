@@ -1,6 +1,6 @@
 {
-    "name": "s_medi",
-    "short_name": "s_medi",
+    "name": "healwell",
+    "short_name": "healwell",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

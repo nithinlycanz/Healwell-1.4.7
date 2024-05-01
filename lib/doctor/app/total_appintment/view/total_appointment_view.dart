@@ -1,4 +1,4 @@
-import 'package:s_medi/doctor/app/auth/view/login_page.dart';
+import 'package:healwell/doctor/app/auth/view/login_page.dart';
 
 import '../../../general/consts/consts.dart';
 import '../controller/total_appointment.dart';

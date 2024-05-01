@@ -1,4 +1,4 @@
-import 'package:s_medi/general/consts/consts.dart';
+import 'package:healwell/general/consts/consts.dart';
 
 import '../../book_appointment/view/appointment_view.dart';
 import '../../widgets/coustom_button.dart';

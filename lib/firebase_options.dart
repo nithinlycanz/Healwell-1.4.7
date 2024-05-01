@@ -23,7 +23,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -47,28 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAtqp6QAHMS1CA8Dj9UPa8eA_IF3KSu7S4',
-    appId: '1:695003663399:web:17bb1f71831ced9a62d202',
-    messagingSenderId: '695003663399',
-    projectId: 'smedical-e2870',
-    authDomain: 'smedical-e2870.firebaseapp.com',
-    storageBucket: 'smedical-e2870.appspot.com',
+    apiKey: 'AIzaSyAGsFR3CC6_VjmBVjV9n8vBd8guNboQIRs',
+    appId: '1:581335919406:web:f4a2f23bdcb8e01100e8bf',
+    messagingSenderId: '581335919406',
+    projectId: 'healwell-c6d4e',
+    authDomain: 'healwell-c6d4e.firebaseapp.com',
+    storageBucket: 'healwell-c6d4e.appspot.com',
+    measurementId: 'G-3VZ4XM5SKH',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD2li5dgb3WSckpqMajGgCshAnZ8kvihb4',
-    appId: '1:695003663399:android:0a664503ef86f94062d202',
-    messagingSenderId: '695003663399',
-    projectId: 'smedical-e2870',
-    storageBucket: 'smedical-e2870.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDce_MP_9H0JIF3FJTYt1iaGKF0H1I9-JM',
-    appId: '1:695003663399:ios:146b0b3ab264ac7262d202',
-    messagingSenderId: '695003663399',
-    projectId: 'smedical-e2870',
-    storageBucket: 'smedical-e2870.appspot.com',
-    iosBundleId: 'com.example.sMedi',
+    apiKey: 'AIzaSyCDkDt7-QZcwEuIZpLAFN1DtB0NvZGkAb4',
+    appId: '1:581335919406:android:f1116fe6108d164100e8bf',
+    messagingSenderId: '581335919406',
+    projectId: 'healwell-c6d4e',
+    storageBucket: 'healwell-c6d4e.appspot.com',
   );
 }

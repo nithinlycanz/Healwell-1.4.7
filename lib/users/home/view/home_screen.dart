@@ -1,4 +1,4 @@
-import 'package:s_medi/general/consts/consts.dart';
+import 'package:healwell/general/consts/consts.dart';
 
 import '../../../general/list/home_icon_list.dart';
 import '../../category_details/view/category_details.dart';

@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:s_medi/general/consts/consts.dart';
+import 'package:healwell/general/consts/consts.dart';
 
 class PasswordResetPage extends StatefulWidget {
   const PasswordResetPage({super.key});

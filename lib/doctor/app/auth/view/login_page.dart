@@ -1,4 +1,4 @@
-import 'package:s_medi/doctor/general/consts/consts.dart';
+import 'package:healwell/doctor/general/consts/consts.dart';
 
 import '../../home/view/home.dart';
 import '../../widgets/coustom_textfield.dart';
