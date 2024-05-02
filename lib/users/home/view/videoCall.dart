@@ -53,7 +53,7 @@ class _VideoCallState extends State<VideoCall> {
                 controller: meetingNameController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'Enter meeting name',
+                  hintText: 'Enter Doctor name',
                 ),
               ),
             ),

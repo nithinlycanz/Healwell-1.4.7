@@ -59,8 +59,8 @@ import 'package:healwell/general/consts/colors.dart';
 import '../../category/view/category_view.dart';
 import '../../settings/view/setting_view.dart';
 import '../../total_appintment/view/total_appointment_view.dart';
-import '../../medcart/view/med_view.dart';
 import 'home_screen.dart';
+import '../../medcart/view/med_view.dart';
 import 'videoCall.dart';
 
 class Home extends StatefulWidget {

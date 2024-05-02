@@ -1,15 +1,14 @@
-import 'package:healwell/general/consts/consts.dart';
 import 'package:flutter/material.dart';
 
 class MedCartView extends StatefulWidget {
   @override
-  _MedicationListState createState() => _MedicationListState();
+  _MedCartViewState createState() => _MedCartViewState();
 }
 
-class _MedicationListState extends State<MedCartView> {
+class _MedCartViewState extends State<MedCartView> {
   int _doloCount = 0;
   int _citrizineCount = 0;
-  int _paracetamolCount = 0;
+  int _paracetamolCount = 0;  
   int _doloPrize = 0;
   int _citrizinePrize = 0;
   int _paracetamolPrize = 0;
@@ -17,53 +16,64 @@ class _MedicationListState extends State<MedCartView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Medication List'),
-        ),
-        body: ListView(
-          children: <Widget>[
-            _buildMedication(
-                'Dolo-650 mg',
-                _doloPrize,
-                4.4,
-                _doloCount,
-                _incrementDolo,
-                _decrementDolo,
-                _incrementDoloPrize,
-                _decrementDoloPrize),
-            _buildMedication(
-                'Citrizine',
-                _citrizinePrize,
-                3.6,
-                _citrizineCount,
-                _incrementCitrizine,
-                _decrementCitrizine,
-                _incrementCitrizinePrize,
-                _decrementCitrizinePrize),
-            _buildMedication(
-                'Paracetamol 500 mg',
-                _paracetamolPrize,
-                4.1,
-                _paracetamolCount,
-                _incrementParacetamol,
-                _decrementParacetamol,
-                _incrementParacetamolPrize,
-                _decrementParacetamolPrize),
-          ],
-        ));
+      appBar: AppBar(
+        title: Text('Medicine cart'),
+        backgroundColor: Color(0xFFD05508),
+      ),
+      body: ListView(
+        children: <Widget>[
+          _buildMedication(
+            'Dolo-650 mg',
+            _doloPrize,
+            4.4,
+            _doloCount,
+            _incrementDolo,
+            _decrementDolo,
+            _incrementDoloPrize,
+            _decrementDoloPrize,
+          ),
+          _buildMedication(
+            'Citrizine',
+            _citrizinePrize,
+            3.6,
+            _citrizineCount,
+            _incrementCitrizine,
+            _decrementCitrizine,
+            _incrementCitrizinePrize,
+            _decrementCitrizinePrize,
+          ),
+          _buildMedication(
+            'Paracetamol 500 mg',
+            _paracetamolPrize,
+            4.1,
+            _paracetamolCount,
+            _incrementParacetamol,
+            _decrementParacetamol,
+            _incrementParacetamolPrize,
+            _decrementParacetamolPrize,
+          ),
+          ElevatedButton(
+            onPressed: _buyMedicines,
+            child: Text('Buy Medicines'),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildMedication(
-      String name,
-      int price,
-      double rating,
-      int count,
-      Function increment,
-      Function decrement,
-      Function incrementPrize,
-      Function decrementPrize) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    String name,
+    int price,
+    double rating,
+    int count,
+    Function increment,
+    Function decrement,
+    Function incrementPrize,
+    Function decrementPrize,
+  ) {
+    return Container(
+      color: Color.fromARGB(255, 192, 219, 172),
+      padding: EdgeInsets.all(8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -71,25 +81,27 @@ class _MedicationListState extends State<MedCartView> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
-              Text('\$' + '$price USD'),
+              Text('\₹' + '$price RUP'),
               Text('Rating: $rating'),
             ],
-          ),
+          ),  
           Column(
             children: <Widget>[
               IconButton(
-                  icon: Icon(Icons.add),
-                  onPressed: () {
-                    increment();
-                    incrementPrize();
-                  }),
+                icon: Icon(Icons.add),
+                onPressed: () {
+                  increment();
+                  incrementPrize();
+                },
+              ),
               Text('$count'),
               IconButton(
-                  icon: Icon(Icons.remove),
-                  onPressed: () {
-                    decrement();
-                    decrementPrize();
-                  }),
+                icon: Icon(Icons.remove),
+                onPressed: () {
+                  decrement();
+                  decrementPrize();
+                },
+              ),
             ],
           ),
         ],
@@ -179,5 +191,69 @@ class _MedicationListState extends State<MedCartView> {
         _paracetamolPrize = _paracetamolPrize - 15;
       }
     });
+  }
+
+  // Existing code...
+  void _buyMedicines() {
+    if (_doloCount > 0 || _citrizineCount > 0 || _paracetamolCount > 0) {
+      // Calculate total price
+      int totalPrice = (_doloCount * _doloPrize) +
+    (_citrizineCount * _citrizinePrize) +
+    (_paracetamolCount * _paracetamolPrize);
+
+
+      // You can implement your logic for buying here.
+      // For example, you can show a dialog for confirmation.
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Confirm Purchase'),
+            content: Text('Total Price: \₹${totalPrice.toString()} RUP'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  // Here you can implement your logic to process the purchase.
+                  // For example, you can show a success message or navigate to a payment screen.
+                  Navigator.of(context).pop();
+                  // Clear counts after successful purchase
+                  setState(() {
+                    _doloCount = 0;
+                    _citrizineCount = 0;
+                    _paracetamolCount = 0;
+                  });
+                },
+                child: Text('Confirm'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text('Cancel'),
+              ),
+            ],
+          );
+        },
+      );
+    } else {
+      // Show error message if no medicine is selected
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Error'),
+            content: Text('Please select at least one medicine to purchase.'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text('OK'),
+              ),
+            ],
+          );
+        },
+      );
+    }
   }
 }
