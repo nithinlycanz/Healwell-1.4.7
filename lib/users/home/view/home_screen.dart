@@ -98,10 +98,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   15.heightBox,
-                  //populer doctors
+                  //popular doctors
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: "Populer Doctors"
+                    child: "Popular Doctors"
                         .text
                         .color(AppColors.greenColor)
                         .size(AppFontSize.size16)
@@ -225,7 +225,7 @@ class HomeScreen extends StatelessWidget {
                               width: context.screenWidth * .16,
                             ),
                             5.heightBox,
-                            "Xry report".text.make()
+                            "X-ray report".text.make()
                           ],
                         ),
                       ),

@@ -16,7 +16,7 @@ class TotalAppointment extends StatelessWidget {
       }),
       appBar: AppBar(
         backgroundColor: AppColors.greenColor,
-        title: "All Appointmnets".text.make(),
+        title: "All Appointments".text.make(),
       ),
       body: FutureBuilder<QuerySnapshot>(
         future: controller.getAppointments(),

@@ -24,9 +24,9 @@ class SignupController extends GetxController {
       const PopupMenuItem(value: 'Liver', child: Text('Liver')),
       const PopupMenuItem(value: 'Lungs', child: Text('Lungs')),
       const PopupMenuItem(value: 'Heart', child: Text('Heart')),
-      const PopupMenuItem(value: 'Kidny', child: Text('Kidny')),
+      const PopupMenuItem(value: 'Kidny', child: Text('Kidney')),
       const PopupMenuItem(value: 'Eye', child: Text('Eye')),
-      const PopupMenuItem(value: 'Stomac', child: Text('Stomac')),
+      const PopupMenuItem(value: 'Stomac', child: Text('Stomach')),
       const PopupMenuItem(value: 'Tooth', child: Text('Tooth')),
     ];
 

@@ -11,7 +11,7 @@ class CategoryScreenn extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.greenColor,
-        title: "Total Categoty".text.make(),
+        title: "Total Category".text.make(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

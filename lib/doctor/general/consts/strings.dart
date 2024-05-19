@@ -20,9 +20,9 @@ class AppString {
       liver = "Liver",
       lungs = "Lungs",
       heart = "Heart",
-      kidny = "Kidny",
+      kidny = "Kidney",
       eye = "Eye",
-      stomac = "Stomac",
+      stomac = "Stomach",
       tooth = "Tooth",
       dontHaveAccount = "Don't have an account";
 }

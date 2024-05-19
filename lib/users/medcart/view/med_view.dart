@@ -8,10 +8,10 @@ class MedCartView extends StatefulWidget {
 class _MedCartViewState extends State<MedCartView> {
   int _doloCount = 0;
   int _citrizineCount = 0;
-  int _paracetamolCount = 0;  
-  int _doloPrize = 0;
-  int _citrizinePrize = 0;
-  int _paracetamolPrize = 0;
+  int _paracetamolCount = 0;
+  int _doloPrize = 50; // Initialized with the correct value
+  int _citrizinePrize = 40; // Initialized with the correct value
+  int _paracetamolPrize = 30; // Initialized with the correct value
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +84,7 @@ class _MedCartViewState extends State<MedCartView> {
               Text('\₹' + '$price RUP'),
               Text('Rating: $rating'),
             ],
-          ),  
+          ),
           Column(
             children: <Widget>[
               IconButton(
@@ -172,7 +172,7 @@ class _MedCartViewState extends State<MedCartView> {
   void _decrementDoloPrize() {
     setState(() {
       if (_doloPrize > 0) {
-        _doloPrize = _doloPrize - 10;
+        _doloPrize -= 10;
       }
     });
   }
@@ -180,7 +180,7 @@ class _MedCartViewState extends State<MedCartView> {
   void _decrementCitrizinePrize() {
     setState(() {
       if (_citrizinePrize > 0) {
-        _citrizinePrize = _citrizinePrize - 20;
+        _citrizinePrize -= 20;
       }
     });
   }
@@ -188,33 +188,35 @@ class _MedCartViewState extends State<MedCartView> {
   void _decrementParacetamolPrize() {
     setState(() {
       if (_paracetamolPrize > 0) {
-        _paracetamolPrize = _paracetamolPrize - 15;
+        _paracetamolPrize -= 15;
       }
     });
   }
 
-  // Existing code...
   void _buyMedicines() {
     if (_doloCount > 0 || _citrizineCount > 0 || _paracetamolCount > 0) {
       // Calculate total price
       int totalPrice = (_doloCount * _doloPrize) +
-    (_citrizineCount * _citrizinePrize) +
-    (_paracetamolCount * _paracetamolPrize);
+          (_citrizineCount * _citrizinePrize) +
+          (_paracetamolCount * _paracetamolPrize);
 
-
-      // You can implement your logic for buying here.
-      // For example, you can show a dialog for confirmation.
+      // Display the QR code in a dialog
       showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Confirm Purchase'),
-            content: Text('Total Price: \₹${totalPrice.toString()} RUP'),
+            content: Column(
+              children: [
+                Text('Total Price: \₹${totalPrice.toString()} RUP'),
+                SizedBox(height: 20), // Add some space between the text and the image
+                Image.asset('assets/qr_code.png'), // Load the QR code from assets
+              ],
+            ),
             actions: <Widget>[
               TextButton(
                 onPressed: () {
                   // Here you can implement your logic to process the purchase.
-                  // For example, you can show a success message or navigate to a payment screen.
                   Navigator.of(context).pop();
                   // Clear counts after successful purchase
                   setState(() {
