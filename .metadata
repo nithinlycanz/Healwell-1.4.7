@@ -3,6 +3,7 @@
 #
 # This file should be version controlled and should not be manually edited.
 
+
 version:
   revision: "ff5b5b5fa6f35b717667719ddfdb1521d8bdd05a"
   channel: "stable"
